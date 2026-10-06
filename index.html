@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Caleb | Software Developer</title>
   <meta name="description" content="Portfolio of Caleb, a professional Full Stack Software Developer." />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
 
   <!-- Bootstrap 5 -->
   <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -208,6 +209,67 @@
             </div>
           </div>
         </div>
+
+        <!-- Project 3 -->
+        <div class="col-lg-6 reveal">
+          <div class="project-card">
+            <img src="assets/img/p3.png" alt="SamPrime" class="project-image" />
+            <div class="project-content">
+              <h3 class="project-title">SamPrime</h3>
+              <p class="project-desc">
+                A vehicle showcase platform that helps SamPrime advertise its cars online and connect prospective buyers with available vehicles.
+              </p>
+              <div class="project-tech-list">
+                <span class="project-tech-item">PHP</span>
+                <span class="project-tech-item">PDO/MySQL</span>
+                <span class="project-tech-item">JavaScript</span>
+                <span class="project-tech-item">CSS</span>
+                <span class="project-tech-item">HTML5</span>
+              </div>
+              <div class="project-links mt-auto">
+                <a href="https://github.com/Calebstack/samprime" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub Repository">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://samprime.site.je/samprime/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="col-lg-6 reveal">
+          <div class="project-card">
+            <img src="assets/img/p4.png" alt="Fazobeth Ventures" class="project-image" />
+            <div class="project-content">
+              <h3 class="project-title">Fazobeth Ventures</h3>
+              <p class="project-desc">
+                An online store for mothers and babies, where customers can browse products and shop conveniently. It integrates Paystack for payments and uses email-based password resets.
+              </p>
+              <div class="project-tech-list">
+                <span class="project-tech-item">PHP</span>
+                <span class="project-tech-item">PDO/MySQL</span>
+                <span class="project-tech-item">Bootstrap</span>
+                <span class="project-tech-item">JavaScript</span>
+                <span class="project-tech-item">jQuery</span>
+                <span class="project-tech-item">Ajax</span>
+                <span class="project-tech-item">CSS</span>
+                <span class="project-tech-item">HTML5</span>
+                <span class="project-tech-item">Paystack API</span>
+                <span class="project-tech-item">SMTP Email</span>
+              </div>
+              <div class="project-links mt-auto">
+                <a href="https://github.com/Calebstack/fazobethbventures" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub Repository">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://fazobethventures.site.je/fazobeth" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -281,17 +343,36 @@
   <script src="assets/js/script.js"></script>
 
   <script>
-    // Navbar behavior
     const nav = document.querySelector('.navbar-custom');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 30) {
-        nav.style.padding = '0.5rem 0';
-        nav.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
-      } else {
-        nav.style.padding = '1rem 0';
-        nav.style.boxShadow = 'none';
-      }
-    });
+    const backToTopBtn = document.getElementById('backToTop');
+    const sectionLinks = [...document.querySelectorAll('.nav-link-custom[href^="#"]')];
+    const linkedSections = sectionLinks
+      .map(link => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+
+    const updateScrollState = () => {
+      const isScrolled = window.scrollY > 30;
+      nav.classList.toggle('scrolled', isScrolled);
+      backToTopBtn.classList.toggle('show', window.scrollY > 400);
+
+      const activationLine = nav.offsetHeight + Math.min(window.innerHeight * 0.18, 130);
+      const reachedPageBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+      const activeSection = reachedPageBottom ? linkedSections[linkedSections.length - 1] : linkedSections.reduce((active, section) => (
+        section.getBoundingClientRect().top <= activationLine ? section : active
+      ), null);
+
+      sectionLinks.forEach(link => {
+        const isActive = activeSection && link.hash === `#${activeSection.id}`;
+        link.classList.toggle('active', Boolean(isActive));
+        if (isActive) {
+          link.setAttribute('aria-current', 'location');
+        } else {
+          link.removeAttribute('aria-current');
+        }
+      });
+    };
+    updateScrollState();
+    window.addEventListener('scroll', updateScrollState, { passive: true });
 
     // Reveal on scroll
     const io = new IntersectionObserver((entries) => {
@@ -317,25 +398,6 @@
           window.scrollTo({ top: targetPosition, behavior: 'smooth' });
         }
       });
-    });
-    // Back to top button
-    const backToTopBtn = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 400) {
-        backToTopBtn.classList.add('show');
-      } else {
-        backToTopBtn.classList.remove('show');
-      }
-      // Navbar scrolled state
-      if (window.scrollY > 30) {
-        nav.style.padding = '0.5rem 0';
-        nav.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
-        nav.classList.add('scrolled');
-      } else {
-        nav.style.padding = '1.1rem 0';
-        nav.style.boxShadow = 'none';
-        nav.classList.remove('scrolled');
-      }
     });
   </script>
 </body>
