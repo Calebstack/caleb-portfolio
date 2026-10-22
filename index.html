@@ -1,405 +1,584 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Caleb | Software Developer</title>
-  <meta name="description" content="Portfolio of Caleb, a professional Full Stack Software Developer." />
+  <title>Olusegun Caleb | Full-Stack Developer · PHP, Laravel &amp; MySQL</title>
+  <meta name="description" content="Olusegun Caleb (Caleb) is a Computer Science graduate and PHP-focused full-stack developer building secure, database-driven web applications with PHP, Laravel, MySQL and JavaScript. Open to full-time roles." />
+  <meta name="keywords" content="Caleb, Olusegun Caleb, full-stack developer, PHP developer, Laravel developer, MySQL, junior developer, Nigeria, portfolio" />
+  <meta name="author" content="Olusegun Caleb" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#070c18" />
+  <link rel="canonical" href="https://caleb-portfolio-eta.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Olusegun Caleb | Full-Stack Developer" />
+  <meta property="og:description" content="I build useful web applications, from database to interface. PHP · Laravel · MySQL · JavaScript." />
+  <meta property="og:url" content="https://caleb-portfolio-eta.vercel.app/" />
+  <meta property="og:image" content="https://caleb-portfolio-eta.vercel.app/assets/img/me.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Olusegun Caleb | Full-Stack Developer" />
+  <meta name="twitter:description" content="I build useful web applications, from database to interface." />
+  <meta name="twitter:image" content="https://caleb-portfolio-eta.vercel.app/assets/img/me.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Olusegun Caleb",
+    "alternateName": "Caleb",
+    "jobTitle": "Full-Stack Web Developer",
+    "url": "https://caleb-portfolio-eta.vercel.app/",
+    "image": "https://caleb-portfolio-eta.vercel.app/assets/img/me.jpg",
+    "email": "mailto:oluseguncaleb6@gmail.com",
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Redeemer's University" },
+    "knowsAbout": ["PHP", "Laravel", "MySQL", "JavaScript", "Bootstrap", "REST APIs", "UI/UX design"],
+    "sameAs": ["https://github.com/Calebstack", "https://www.linkedin.com/in/olusegun-caleb-8a7273214/"]
+  }
+  </script>
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
-
-  <!-- Bootstrap 5 -->
-  <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="assets/fa/css/all.min.css">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="apple-touch-icon" href="assets/img/me.jpg" />
+  <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="assets/fa/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script>
+    document.documentElement.classList.add('js');
+    try { var t = localStorage.getItem('caleb-theme'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
 </head>
-
 <body>
+  <a class="skip" href="#about">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+  <div class="bg-fx" aria-hidden="true"><i></i><i></i></div>
 
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-    <div class="container">
-      <a class="brand-logo" href="#home">
-        <span>Caleb/</span>>
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="#home" aria-label="Caleb — home">
+        <span class="brand__name">Caleb</span><b>/&gt;</b>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-        style="border: none; color: #fff;">
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-        <ul class="navbar-nav align-items-lg-center">
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="#work">Projects</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="#contact">Contact</a></li>
-          <li class="nav-item ms-lg-4 mt-3 mt-lg-0">
-            <a class="btn btn-outline-custom btn-sm" href="assets/Resume.pdf" style="padding: 0.5rem 1.2rem;">Resume</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <header id="home" class="hero">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-10 mx-auto text-center">
-          <div class="hero-badge reveal mx-auto">
-            <i class="fas fa-circle"></i>FULLSTACK WEB DEVELOPER
-          </div>
-          <h1 class="hero-title reveal">
-            Hi, I'm Caleb.<br />
-            <span>I build robust web applications.</span>
-          </h1>
-          <p class="hero-lead reveal mt-4 mx-auto">
-            I am a Full Stack Software Developer specializing in building exceptional digital experiences. Currently,
-            I'm focused on engineering accessible, human-centered, and highly scalable products.
-          </p>
-          <div class="d-flex flex-wrap gap-3 mt-5 justify-content-center reveal">
-            <a href="#work" class="btn btn-primary-custom">Check out my work</a>
-            <a href="https://github.com/Calebstack" target="_blank" class="btn btn-outline-custom"><i
-                class="fab fa-github me-2"></i>GitHub Profile</a>
-          </div>
-        </div>
+      <nav class="nav__links" id="navLinks" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#resume">Résumé</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="icon-btn theme-btn" id="themeBtn" aria-label="Switch to light theme" title="Toggle theme">
+          <i class="fa-solid fa-moon moon"></i><i class="fa-solid fa-sun sun"></i>
+        </button>
+        <a class="btn btn--primary btn--sm nav__cta" href="#contact">Hire me <i class="fa-solid fa-arrow-right"></i></a>
+        <button class="icon-btn nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks"><i class="fa-solid fa-bars"></i></button>
       </div>
     </div>
   </header>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container">
-      <div class="section-header reveal">
-        <h2 class="section-title"><span class="section-number">01.</span> About Me</h2>
-      </div>
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-7 reveal">
-          <div class="about-text">
-            <p>
-              Hi, I'm Caleb, a full-stack web developer passionate about building modern, responsive, and scalable web applications that deliver real value to users.
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__copy">
+            <span class="status rise"><span class="pulse"></span> Open to full-time roles · Nigeria</span>
+            <h1 class="rise" style="--d:.08s">
+              <span class="hi">// Hi, I'm Caleb.</span>
+              I build useful web applications, <span class="grad">from database to interface.</span>
+            </h1>
+            <p class="hero__lead rise" style="--d:.16s">
+              I'm a Computer Science graduate and <strong>PHP-focused full-stack developer</strong>. I build secure, database-driven web applications with PHP, MySQL, JavaScript and Bootstrap — from the schema and authentication to the responsive interface on top. I'm looking for my first full-time role.
             </p>
-            <p>
-              I hold a B.Sc. in Computer Science from Redeemer's University, and I recently completed an intensive 3-month Full Stack software development bootcamp at Moat Academy, where I sharpened my skills building full-stack web applications from the ground up.
-            </p>
-            <p>
-              I'm comfortable working across the stack with PHP, Laravel, MySQL, and JavaScript, and I enjoy turning an idea into a working, well-structured application — from designing the database to building a clean, responsive interface on top of it. I'm currently looking for my first full-time role, where I can keep learning, contribute real value early, and grow alongside an experienced engineering team.
-            </p>
+            <div class="hero__actions rise" style="--d:.24s">
+              <a href="#projects" class="btn btn--primary btn--lg">View my projects <i class="fa-solid fa-arrow-down"></i></a>
+              <a href="assets/Resume.pdf" class="btn btn--ghost btn--lg" download>Download résumé <i class="fa-solid fa-download"></i></a>
+              <a href="https://github.com/Calebstack" target="_blank" rel="noopener" class="icon-btn" aria-label="GitHub" style="width:56px;height:56px"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/olusegun-caleb-8a7273214/" target="_blank" rel="noopener" class="icon-btn" aria-label="LinkedIn" style="width:56px;height:56px"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <div class="stack-row rise" style="--d:.32s">
+              <small>Stack</small><span>PHP</span><span>Laravel</span><span>MySQL</span><span>JavaScript</span><span>Bootstrap</span>
+            </div>
           </div>
-        </div>
-        <div class="col-lg-4 offset-lg-1 reveal">
-          <div class="about-image-wrapper">
-            <img src="assets/img/me.png" alt="Caleb - Software Developer" class="about-img" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- SKILLS / TOOLKIT -->
-  <section id="skills">
-    <div class="container">
-      <div class="section-header reveal">
-        <h2 class="section-title"><span class="section-number">02.</span> Technical Skills</h2>
-      </div>
-
-      <div class="skills-grid reveal mt-5">
-        <div class="skill-card">
-          <i class="fab fa-php skill-icon" style="color: #777BB4;"></i>
-          <span class="skill-name">PHP</span>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-laravel skill-icon" style="color: #FF2D20;"></i>
-          <span class="skill-name">Laravel</span>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-database skill-icon" style="color: #4479A1;"></i>
-          <span class="skill-name">MySQL</span>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-js skill-icon" style="color: #F7DF1E;"></i>
-          <span class="skill-name">JavaScript</span>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-code skill-icon" style="color: #0769ad;"></i>
-          <span class="skill-name">jQuery & Ajax</span>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-html5 skill-icon" style="color: #E34F26;"></i>
-          <span class="skill-name">HTML5</span>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-css3-alt skill-icon" style="color: #1572B6;"></i>
-          <span class="skill-name">CSS3</span>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-bootstrap skill-icon" style="color: #7952B3;"></i>
-          <span class="skill-name">Bootstrap</span>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-git-alt skill-icon" style="color: #F1502F;"></i>
-          <span class="skill-name">Git</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WORK / PROJECTS -->
-  <section id="work">
-    <div class="container">
-      <div class="section-header reveal">
-        <h2 class="section-title"><span class="section-number">03.</span> Things I've Built</h2>
-      </div>
-
-      <div class="row g-4 mt-4">
-        <!-- Project 1 -->
-        <div class="col-lg-6 reveal">
-          <div class="project-card">
-            <img src="assets/img/p1.png" alt="E-Commerce Analytics" class="project-image" />
-            <div class="project-content">
-              <h3 class="project-title">CampusFind</h3>
-              <p class="project-desc">
-                A web application designed to help students find their way around campus easily. It includes a map of
-                the campus, a list of important locations, and a search function to help students find what they need.
-              </p>
-              <div class="project-tech-list">
-                <span class="project-tech-item">PHP</span>
-                <span class="project-tech-item">MySQL</span>
-                <span class="project-tech-item">Bootstrap</span>
-                <span class="project-tech-item">Jquery</span>
-                <span class="project-tech-item">Ajax</span>
-                <span class="project-tech-item">CSS</span>
-                <span class="project-tech-item">HTML5</span>
-              </div>
-              <div class="project-links mt-auto">
-                <a href="https://github.com/Calebstack/CampusFind" class="project-link" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
-                <a href="https://campusfind.xo.je/campus/" target="_blank" class="project-link" aria-label="Live Demo"><i
-                    class="fas fa-external-link-alt"></i></a>
-              </div>
+          <div class="hero__visual rise" style="--d:.2s">
+            <div class="portrait"><img src="assets/img/me.jpg" alt="Portrait of Caleb, full-stack developer" width="1000" height="1000" fetchpriority="high" /></div>
+            <div class="float float--badge">
+              <i class="fa-solid fa-briefcase"></i>
+              <div><b>Open to work</b><small>First full-time role</small></div>
+            </div>
+            <div class="float float--code" aria-hidden="true">
+              <div class="dots"><i></i><i></i><i></i></div>
+              <span class="k">const</span> caleb <span class="p">=</span> <span class="p">{</span><br>
+              &nbsp;&nbsp;role<span class="p">:</span> <span class="s">"Full-Stack Dev"</span><span class="p">,</span><br>
+              &nbsp;&nbsp;focus<span class="p">:</span> <span class="p">[</span><span class="s">"PHP"</span><span class="p">,</span> <span class="s">"MySQL"</span><span class="p">],</span><br>
+              &nbsp;&nbsp;degree<span class="p">:</span> <span class="s">"B.Sc. Computer Sci"</span><span class="p">,</span><br>
+              &nbsp;&nbsp;openToWork<span class="p">:</span> <span class="b">true</span><br>
+              <span class="p">};</span>
             </div>
           </div>
         </div>
 
-        <!-- Project 2 -->
-        <div class="col-lg-6 reveal">
-          <div class="project-card">
-            <img src="assets/img/p2.png" alt="Task Management Platform" class="project-image" />
-            <div class="project-content">
-              <h3 class="project-title">Connect Pro</h3>
-              <p class="project-desc">
-                Connect Pro is a web-based platform for business people and clients to work together on projects with real-time updates and seamless communication.
-              </p>
-              <div class="project-tech-list">
-                <span class="project-tech-item">PHP</span>
-                <span class="project-tech-item">MySQL</span>
-                <span class="project-tech-item">Bootstrap</span>
-                <span class="project-tech-item">Javascript</span>
-                <span class="project-tech-item">Ajax</span>
-                <span class="project-tech-item">CSS</span>
-                <span class="project-tech-item">HTML5</span>
-                <span class="project-tech-item">JSON</span>
-              </div>
-              <div class="project-links mt-auto">
-                <a href="https://github.com/Calebstack/ConnectPro" class="project-link" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
-                <a href="https://connectpro.ct.ws/booking_service/index.php" target="_blank" class="project-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
-              </div>
+        <div class="facts">
+          <div class="fact reveal"><i class="fa-solid fa-graduation-cap"></i><div><b>B.Sc. Computer Science</b><span>Redeemer's University, 2020 – 2024</span></div></div>
+          <div class="fact reveal" style="--d:.07s"><i class="fa-solid fa-award"></i><div><b>Software Development Certificate</b><span>Moat Academy, 2026</span></div></div>
+          <div class="fact reveal" style="--d:.14s"><i class="fa-solid fa-laptop-code"></i><div><b>4 full-stack projects</b><span>Live demos and source on GitHub</span></div></div>
+          <div class="fact reveal" style="--d:.21s"><i class="fa-solid fa-pen-ruler"></i><div><b>UI/UX background</b><span>Figma prototypes and dev handoff</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="block">
+      <div class="container">
+        <div class="about">
+          <div class="about__text reveal">
+            <div class="eyebrow">01 — About me</div>
+            <h2 class="sec-title" style="margin-bottom:1.6rem">A developer who cares how it works <span class="grad">and how it feels.</span></h2>
+            <p>Hi, I'm Caleb, a full-stack web developer passionate about building modern, responsive, and scalable web applications that deliver real value to users.</p>
+            <p>I hold a <strong>B.Sc. in Computer Science from Redeemer's University</strong>, and I recently completed an intensive 3-month Full Stack software development bootcamp at <strong>Moat Academy</strong>, where I sharpened my skills building full-stack web applications from the ground up.</p>
+            <p>I'm comfortable working across the stack with PHP, Laravel, MySQL, and JavaScript, and I enjoy turning an idea into a working, well-structured application — from designing the database to building a clean, responsive interface on top of it. My earlier work as a UI/UX and graphics designer also means I understand what design teams hand over, and what good handoff looks like.</p>
+            <div class="callout">
+              <span class="pulse"></span>
+              <div><b>Looking for my first full-time role</b><span>I want a team where I can keep learning, contribute real value early, and grow alongside experienced engineers.</span></div>
             </div>
           </div>
-        </div>
 
-        <!-- Project 3 -->
-        <div class="col-lg-6 reveal">
-          <div class="project-card">
-            <img src="assets/img/p3.png" alt="SamPrime" class="project-image" />
-            <div class="project-content">
-              <h3 class="project-title">SamPrime</h3>
-              <p class="project-desc">
-                A vehicle showcase platform that helps SamPrime advertise its cars online and connect prospective buyers with available vehicles.
-              </p>
-              <div class="project-tech-list">
-                <span class="project-tech-item">PHP</span>
-                <span class="project-tech-item">PDO/MySQL</span>
-                <span class="project-tech-item">JavaScript</span>
-                <span class="project-tech-item">CSS</span>
-                <span class="project-tech-item">HTML5</span>
-              </div>
-              <div class="project-links mt-auto">
-                <a href="https://github.com/Calebstack/samprime" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub Repository">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="https://samprime.site.je/samprime/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Live Demo">
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="col-lg-6 reveal">
-          <div class="project-card">
-            <img src="assets/img/p4.png" alt="Fazobeth Ventures" class="project-image" />
-            <div class="project-content">
-              <h3 class="project-title">Fazobeth Ventures</h3>
-              <p class="project-desc">
-                An online store for mothers and babies, where customers can browse products and shop conveniently. It integrates Paystack for payments and uses email-based password resets.
-              </p>
-              <div class="project-tech-list">
-                <span class="project-tech-item">PHP</span>
-                <span class="project-tech-item">PDO/MySQL</span>
-                <span class="project-tech-item">Bootstrap</span>
-                <span class="project-tech-item">JavaScript</span>
-                <span class="project-tech-item">jQuery</span>
-                <span class="project-tech-item">Ajax</span>
-                <span class="project-tech-item">CSS</span>
-                <span class="project-tech-item">HTML5</span>
-                <span class="project-tech-item">Paystack API</span>
-                <span class="project-tech-item">SMTP Email</span>
-              </div>
-              <div class="project-links mt-auto">
-                <a href="https://github.com/Calebstack/fazobethbventures" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub Repository">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="https://fazobethventures.site.je/fazobeth" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Live Demo">
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
-              </div>
-            </div>
+          <div class="bring">
+            <div class="card reveal" style="--d:.05s"><div class="ico"><i class="fa-solid fa-database"></i></div><div><h3>Database-first thinking</h3><p>Relational schemas and PDO prepared statements keep data organised and injection risk low.</p></div></div>
+            <div class="card reveal" style="--d:.12s"><div class="ico"><i class="fa-solid fa-user-shield"></i></div><div><h3>Secure by default</h3><p>Session-based role access, password hashing and OTP-verified accounts in the apps I build.</p></div></div>
+            <div class="card reveal" style="--d:.19s"><div class="ico"><i class="fa-solid fa-pen-ruler"></i></div><div><h3>Design-aware engineer</h3><p>Figma prototypes and requirements work mean I read designs well and ship interfaces that match.</p></div></div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- RESUME CTA -->
-  <section id="resume">
-    <div class="container reveal">
-      <div class="resume-cta">
-        <h2 class="mb-4">Looking for my complete history?</h2>
-        <p class="text-secondary mb-5 mx-auto" style="max-width: 600px;">
-          I have extensive experience working with various web technologies. Download my resume to review my full
-          professional background, education, and technical competencies.
-        </p>
-        <a href="assets/Resume.pdf" class="btn btn-primary-custom btn-lg" download><i class="fas fa-file-pdf me-2"></i> Download Resume.pdf</a>
-      </div>
-    </div>
-  </section>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="block" style="padding-top:0">
+      <div class="container">
+        <div class="sec-head reveal">
+          <div class="eyebrow">02 — Experience</div>
+          <h2 class="sec-title">Training, design work <span class="grad">&amp; education.</span></h2>
+          <p class="sec-sub">Design-facing roles that gave me real product, stakeholder and workflow experience — alongside the software development training that moved me into engineering.</p>
+        </div>
 
-  <!-- CONTACT -->
-  <section id="contact" class="contact-section">
-    <div class="container reveal">
-      <div class="section-header text-center">
-        <h2 class="section-title justify-content-center" style="font-size: 1.5rem; color: var(--accent-primary);">
-          <span class="section-number" style="font-size: 1rem;">04.</span> What's Next?
-        </h2>
-        <h3 class="mt-3" style="font-size: 3rem;">Get In Touch</h3>
-      </div>
+        <div class="timeline">
+          <article class="tl reveal">
+            <div class="tl__date"><b>Apr – Jul</b>2026</div>
+            <div class="card">
+              <div class="tl__top"><span class="chip">Training</span></div>
+              <h3>Software Development Bootcamp Trainee</h3>
+              <div class="tl__org">Moat Academy</div>
+              <ul>
+                <li>Completed an intensive full-stack curriculum covering HTML, CSS, JavaScript, PHP, MySQL, Bootstrap and Git, delivering 2 hands-on projects to sprint deadlines.</li>
+                <li>Applied modern development workflows and industry best practices to meet all sprint deadlines.</li>
+                <li>Earned a Software Development Certificate by completing every required project milestone and assessment.</li>
+              </ul>
+            </div>
+          </article>
 
-      <div class="text-center mt-5">
-        <p class="contact-text mx-auto">
-          I am actively looking for new opportunities and my inbox is always open. Whether you have a question or are
-          hiring for a full-time engineering role, I'll try my best to get back to you!
-        </p>
+          <article class="tl reveal">
+            <div class="tl__date"><b>Feb – Jul</b>2026</div>
+            <div class="card">
+              <div class="tl__top"><span class="chip chip--blue">Design</span></div>
+              <h3>UI Designer <span style="font-weight:400;color:var(--muted);font-size:.8em">(alongside the bootcamp)</span></h3>
+              <div class="tl__org">HOPn <span>— Germany (Remote)</span></div>
+              <ul>
+                <li>Mapped the applicant journey for a SaaS recruitment platform's HR-AI CV workflow — from upload through AI-assisted screening to shortlisting — into a fully navigable Figma prototype, working directly with data and logic requirements.</li>
+                <li>Built responsive screens and interaction states for a finance app's onboarding-to-conversion flow, coordinating with stakeholders on requirements.</li>
+                <li>Balanced this design work alongside a concurrent full-stack development bootcamp, meeting both design assignments and programme milestones on schedule.</li>
+              </ul>
+            </div>
+          </article>
 
-        <a href="mailto:oluseguncaleb6@gmail.com" class="contact-email">
-          <i class="fas fa-paper-plane"></i> Send Me an Email
-        </a>
+          <article class="tl reveal">
+            <div class="tl__date"><b>Jan – Dec</b>2025</div>
+            <div class="card">
+              <div class="tl__top"><span class="chip chip--blue">Design</span><span class="chip">NYSC</span></div>
+              <h3>UI &amp; Graphics Designer</h3>
+              <div class="tl__org">Powersoft Integrated Solutions Ltd <span>— Ikeja, Lagos</span></div>
+              <ul>
+                <li>Designed and prototyped a multi-payment approval workflow end-to-end, from static screens through animated, interactive Figma prototypes, ahead of development handoff.</li>
+                <li>Delivered consistent, on-schedule output across multiple simultaneous design workstreams while communicating regularly with project managers and stakeholders.</li>
+                <li>Prepared on-brand graphic design assets for a company webinar.</li>
+              </ul>
+            </div>
+          </article>
 
-        <div class="social-links justify-content-center mt-4">
-          <a href="https://github.com/Calebstack" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/olusegun-caleb-8a7273214/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://wa.me/qr/MOZ7NEHR2LV2M1" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <article class="tl reveal">
+            <div class="tl__date"><b>2020 – 2024</b>Feb – Oct</div>
+            <div class="card">
+              <div class="tl__top"><span class="chip">Education</span></div>
+              <h3>B.Sc. Computer Science</h3>
+              <div class="tl__org">Redeemer's University</div>
+              <ul>
+                <li>Also holds the NYSC Certificate of National Service (2025) and the Moat Academy Software Development Certificate (2026).</li>
+              </ul>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- BACK TO TOP -->
-  <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">
-    <i class="fas fa-chevron-up"></i>
-  </a>
+    <!-- PROJECTS -->
+    <section id="projects" class="block" style="padding-top:0">
+      <div class="container">
+        <div class="sec-head reveal">
+          <div class="eyebrow">03 — Projects</div>
+          <h2 class="sec-title">Things I've <span class="grad">built.</span></h2>
+          <p class="sec-sub">Four full-stack applications with live demos and source code. Open a case study to see what I implemented and how it works under the hood.</p>
+        </div>
+
+        <div class="projects">
+          <!-- Fazobeth -->
+          <article class="card pcard reveal">
+            <button class="pcard__media" data-case="case-fazobeth" aria-label="Open Fazobeth Ventures case study">
+              <div class="frame"><div class="frame__bar"><i></i><i></i><i></i><span>fazobethventures.site.je/fazobeth</span></div><div class="frame__view"><img src="assets/img/p4.webp" alt="Fazobeth Ventures online store home page" loading="lazy" /></div></div>
+            </button>
+            <div class="pcard__body">
+              <div class="pcard__meta"><span class="chip chip--blue">E-commerce</span></div>
+              <h3>Fazobeth Ventures</h3>
+              <p class="pcard__desc">A full-stack online store for mothers and babies, where customers browse products, manage a cart and pay online with Paystack.</p>
+              <ul class="points">
+                <li>Complete shopping flow: catalogue, product pages, AJAX-driven cart, checkout, order confirmation and order history.</li>
+                <li>Paystack integration with each payment tied to a processed order record in MySQL via PDO prepared statements.</li>
+                <li>Signup, login, OTP verification and SMTP email password reset, plus an admin area with image uploads.</li>
+              </ul>
+              <ul class="tags"><li>PHP</li><li>PDO / MySQL</li><li>JavaScript</li><li>jQuery</li><li>AJAX</li><li>Bootstrap</li><li>Paystack API</li><li>SMTP</li></ul>
+              <div class="pcard__actions">
+                <button class="btn btn--primary btn--sm" data-case="case-fazobeth">Case study <i class="fa-solid fa-arrow-right"></i></button>
+                <a class="icon-btn" style="width:40px;height:40px;border-radius:12px;font-size:.95rem" href="https://fazobethventures.site.je/fazobeth" target="_blank" rel="noopener" aria-label="Fazobeth Ventures live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a class="icon-btn" style="width:40px;height:40px;border-radius:12px;font-size:.95rem" href="https://github.com/Calebstack/fazobethbventures" target="_blank" rel="noopener" aria-label="Fazobeth Ventures source on GitHub"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CampusFind -->
+          <article class="card pcard reveal">
+            <button class="pcard__media" data-case="case-campusfind" aria-label="Open CampusFind case study">
+              <div class="frame"><div class="frame__bar"><i></i><i></i><i></i><span>campusfind.xo.je/campus</span></div><div class="frame__view"><img src="assets/img/p1.webp" alt="CampusFind lost and found web app home page" loading="lazy" /></div></div>
+            </button>
+            <div class="pcard__body">
+              <div class="pcard__meta"><span class="chip chip--blue">Lost &amp; found</span></div>
+              <h3>CampusFind</h3>
+              <p class="pcard__desc">A responsive lost-and-found platform for 50+ students and administrators to report, search for and reclaim items on campus.</p>
+              <ul class="points">
+                <li>Used PHP PDO prepared statements across 6 relational tables instead of raw SQL queries.</li>
+                <li>Added session-based role authentication and password hashing for secure access.</li>
+                <li>Built an AJAX/jQuery email check at signup and responsive Bootstrap CRUD and search features.</li>
+              </ul>
+              <ul class="tags"><li>PHP</li><li>MySQL</li><li>AJAX</li><li>jQuery</li><li>Bootstrap</li></ul>
+              <div class="pcard__actions">
+                <button class="btn btn--primary btn--sm" data-case="case-campusfind">Case study <i class="fa-solid fa-arrow-right"></i></button>
+                <a class="icon-btn" style="width:40px;height:40px;border-radius:12px;font-size:.95rem" href="https://campusfind.xo.je/campus/" target="_blank" rel="noopener" aria-label="CampusFind live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a class="icon-btn" style="width:40px;height:40px;border-radius:12px;font-size:.95rem" href="https://github.com/Calebstack/CampusFind" target="_blank" rel="noopener" aria-label="CampusFind source on GitHub"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Connect Pro -->
+          <article class="card pcard reveal" style="--d:.08s">
+            <button class="pcard__media" data-case="case-connectpro" aria-label="Open Connect Pro case study">
+              <div class="frame"><div class="frame__bar"><i></i><i></i><i></i><span>connectpro.ct.ws/booking_service</span></div><div class="frame__view"><img src="assets/img/p2.webp" alt="Connect Pro service marketplace home page" loading="lazy" /></div></div>
+            </button>
+            <div class="pcard__body">
+              <div class="pcard__meta"><span class="chip chip--blue">Service marketplace</span></div>
+              <h3>Connect Pro</h3>
+              <p class="pcard__desc">A marketplace connecting clients with service providers, with dedicated dashboards and transparent booking tracking for each role.</p>
+              <ul class="points">
+                <li>Separate client and provider dashboards with isolated permissions.</li>
+                <li>Keyword and category filtering in PHP and MySQL.</li>
+                <li>Booking status tracking from request to completion.</li>
+              </ul>
+              <ul class="tags"><li>PHP</li><li>MySQL</li><li>JavaScript</li><li>JSON</li><li>AJAX</li><li>Bootstrap</li></ul>
+              <div class="pcard__actions">
+                <button class="btn btn--primary btn--sm" data-case="case-connectpro">Case study <i class="fa-solid fa-arrow-right"></i></button>
+                <a class="icon-btn" style="width:40px;height:40px;border-radius:12px;font-size:.95rem" href="https://connectpro.ct.ws/booking_service/index.php" target="_blank" rel="noopener" aria-label="Connect Pro live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a class="icon-btn" style="width:40px;height:40px;border-radius:12px;font-size:.95rem" href="https://github.com/Calebstack/ConnectPro" target="_blank" rel="noopener" aria-label="Connect Pro source on GitHub"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- SamPrime -->
+          <article class="card pcard reveal" style="--d:.16s">
+            <button class="pcard__media" data-case="case-samprime" aria-label="Open SamPrime case study">
+              <div class="frame"><div class="frame__bar"><i></i><i></i><i></i><span>samprime.site.je/samprime</span></div><div class="frame__view"><img src="assets/img/p3.webp" alt="SamPrime vehicle inventory page" loading="lazy" /></div></div>
+            </button>
+            <div class="pcard__body">
+              <div class="pcard__meta"><span class="chip chip--blue">Vehicle showcase</span></div>
+              <h3>SamPrime</h3>
+              <p class="pcard__desc">A vehicle showcase platform that lets SamPrime advertise its cars online and connect prospective buyers with available vehicles.</p>
+              <ul class="points">
+                <li>Car listings page plus individual vehicle detail pages.</li>
+                <li>PDO data layer with reusable classes and shared partials.</li>
+                <li>Admin area for managing vehicle listings.</li>
+              </ul>
+              <ul class="tags"><li>PHP</li><li>PDO / MySQL</li><li>JavaScript</li><li>HTML5</li><li>CSS3</li></ul>
+              <div class="pcard__actions">
+                <button class="btn btn--primary btn--sm" data-case="case-samprime">Case study <i class="fa-solid fa-arrow-right"></i></button>
+                <a class="icon-btn" style="width:40px;height:40px;border-radius:12px;font-size:.95rem" href="https://samprime.site.je/samprime/" target="_blank" rel="noopener" aria-label="SamPrime live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a class="icon-btn" style="width:40px;height:40px;border-radius:12px;font-size:.95rem" href="https://github.com/Calebstack/samprime" target="_blank" rel="noopener" aria-label="SamPrime source on GitHub"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="block" style="padding-top:0">
+      <div class="container">
+        <div class="sec-head reveal">
+          <div class="eyebrow">04 — Technical skills</div>
+          <h2 class="sec-title">My <span class="grad">toolkit.</span></h2>
+          <p class="sec-sub">What I work with day to day, grouped by where it sits in the stack.</p>
+        </div>
+
+        <div class="skills">
+          <div class="card reveal">
+            <h3><i class="fa-solid fa-server"></i> Backend</h3>
+            <ul class="chips">
+              <li><i class="fa-brands fa-php" style="color:#8a8fd0"></i>PHP</li>
+              <li><i class="fa-brands fa-laravel" style="color:#ff2d20"></i>Laravel</li>
+              <li><i class="fa-solid fa-plug" style="color:var(--accent)"></i>RESTful APIs</li>
+              <li><i class="fa-solid fa-user-shield" style="color:var(--accent)"></i>Auth &amp; Authorization</li>
+            </ul>
+          </div>
+          <div class="card reveal" style="--d:.06s">
+            <h3><i class="fa-solid fa-database"></i> Databases</h3>
+            <ul class="chips">
+              <li><i class="fa-solid fa-database" style="color:#4aa3d8"></i>MySQL</li>
+              <li><i class="fa-solid fa-leaf" style="color:#47a248"></i>MongoDB</li>
+              <li><i class="fa-solid fa-shield-halved" style="color:var(--accent)"></i>PDO (prepared statements)</li>
+            </ul>
+          </div>
+          <div class="card reveal" style="--d:.12s">
+            <h3><i class="fa-solid fa-code"></i> Frontend</h3>
+            <ul class="chips">
+              <li><i class="fa-brands fa-js" style="color:#f0c800"></i>JavaScript (ES6+)</li>
+              <li><i class="fa-brands fa-react" style="color:#61dafb"></i>React</li>
+              <li><i class="fa-brands fa-html5" style="color:#e8582c"></i>HTML5</li>
+              <li><i class="fa-brands fa-css3-alt" style="color:#2d8de0"></i>CSS3</li>
+              <li><i class="fa-brands fa-bootstrap" style="color:#8f63d2"></i>Bootstrap</li>
+              <li><i class="fa-solid fa-code" style="color:#3a8fd6"></i>jQuery</li>
+              <li><i class="fa-solid fa-arrows-rotate" style="color:var(--accent)"></i>AJAX</li>
+            </ul>
+          </div>
+          <div class="card reveal">
+            <h3><i class="fa-solid fa-credit-card"></i> Integrations</h3>
+            <ul class="chips">
+              <li><i class="fa-solid fa-credit-card" style="color:var(--accent)"></i>Paystack API</li>
+              <li><i class="fa-solid fa-envelope" style="color:var(--accent)"></i>SMTP (OTP &amp; password reset)</li>
+            </ul>
+          </div>
+          <div class="card reveal" style="--d:.06s">
+            <h3><i class="fa-solid fa-cloud"></i> Cloud &amp; tools</h3>
+            <ul class="chips">
+              <li><i class="fa-brands fa-aws" style="color:#ff9900"></i>AWS (EC2, S3, RDS)</li>
+              <li><i class="fa-brands fa-docker" style="color:#2f9be8"></i>Docker</li>
+              <li><i class="fa-brands fa-git-alt" style="color:#f1502f"></i>Git &amp; GitHub</li>
+              <li><i class="fa-solid fa-terminal" style="color:var(--accent)"></i>VS Code</li>
+              <li><i class="fa-solid fa-server" style="color:var(--accent)"></i>XAMPP</li>
+            </ul>
+          </div>
+          <div class="card reveal" style="--d:.12s">
+            <h3><i class="fa-solid fa-pen-ruler"></i> Design</h3>
+            <ul class="chips">
+              <li><i class="fa-brands fa-figma" style="color:#f24e1e"></i>Figma</li>
+              <li><i class="fa-solid fa-palette" style="color:#8f63d2"></i>Canva</li>
+              <li><i class="fa-solid fa-pen-nib" style="color:var(--accent)"></i>Webflow</li>
+              <li><i class="fa-solid fa-wand-magic-sparkles" style="color:var(--accent)"></i>Stitch</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="learning reveal">
+          <b><i class="fa-solid fa-seedling"></i>Currently expanding into</b>
+          <ul class="chips">
+            <li><i class="fa-brands fa-node-js" style="color:#5fa04e"></i>Node.js</li>
+            <li><i class="fa-solid fa-vial" style="color:var(--accent)"></i>Automated testing</li>
+            <li><i class="fa-solid fa-code-branch" style="color:var(--accent)"></i>CI/CD basics</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume" class="block" style="padding-top:0">
+      <div class="container">
+        <div class="resume reveal">
+          <div>
+            <div class="eyebrow">05 — Résumé</div>
+            <h2>Want the <span class="grad">full picture?</span></h2>
+            <p>View my résumé for my background in education, training, design experience and technical skills. The full CV adds more detail on each project and role.</p>
+            <div class="resume__btns">
+              <a href="assets/Resume.pdf" class="btn btn--primary btn--lg" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> Résumé</a>
+              <a href="assets/CV.pdf" class="btn btn--ghost btn--lg" target="_blank" rel="noopener"><i class="fa-solid fa-download"></i> Full CV</a>
+            </div>
+          </div>
+          <div class="doc" aria-hidden="true">
+            <span class="stamp">PDF · READY</span>
+            <h4>OLUSEGUN CALEB</h4>
+            <div class="sub">Full-Stack / Backend Web Developer | PHP · Laravel · MySQL · JavaScript</div>
+            <h5>Professional summary</h5>
+            <p>Full-Stack / Backend Web Developer with a B.Sc. in Computer Science, building secure, database-driven web applications in PHP and Laravel backed by MySQL.</p>
+            <h5>Key projects</h5>
+            <div class="row"><span><b>Campus Find</b> — PHP · MySQL · AJAX</span></div>
+            <div class="row"><span><b>Fazobeth Ventures</b> — PHP · PDO · Paystack</span></div>
+            <h5>Experience</h5>
+            <div class="row"><span><b>Software Development Bootcamp Trainee</b>, Moat Academy</span><em>2026</em></div>
+            <div class="row"><span><b>UI Designer</b>, HOPn (Germany, Remote)</span><em>2026</em></div>
+            <div class="row"><span><b>UI &amp; Graphics Designer</b>, Powersoft</span><em>2025</em></div>
+            <h5>Education</h5>
+            <div class="row"><span><b>B.Sc. Computer Science</b> — Redeemer's University</span><em>2020–24</em></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="block contact" style="padding-top:0">
+      <div class="container">
+        <div class="eyebrow reveal" style="justify-content:center">06 — What's next?</div>
+        <h2 class="reveal">Let's build something <span class="grad">great</span> together.</h2>
+        <p class="reveal">I'm actively looking for new opportunities and my inbox is always open. Whether you have a question or you're hiring for a full-time engineering role, I'll do my best to get back to you quickly.</p>
+        <div class="contact__actions reveal">
+          <a href="mailto:oluseguncaleb6@gmail.com" class="btn btn--primary btn--lg"><i class="fa-solid fa-paper-plane"></i> Send me an email</a>
+          <a href="https://www.linkedin.com/in/olusegun-caleb-8a7273214/" target="_blank" rel="noopener" class="btn btn--ghost btn--lg"><i class="fa-brands fa-linkedin-in"></i> Connect on LinkedIn</a>
+        </div>
+        <div class="email-pill reveal">
+          <span>oluseguncaleb6@gmail.com</span>
+          <button type="button" id="copyEmail" data-email="oluseguncaleb6@gmail.com"><i class="fa-regular fa-copy"></i> Copy</button>
+        </div>
+        <div class="socials reveal">
+          <a class="icon-btn" href="https://github.com/Calebstack" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a class="icon-btn" href="https://www.linkedin.com/in/olusegun-caleb-8a7273214/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a class="icon-btn" href="https://wa.me/qr/MOZ7NEHR2LV2M1" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a class="icon-btn" href="tel:+2348110150322" aria-label="Call Caleb"><i class="fa-solid fa-phone"></i></a>
+        </div>
+        <div class="meta-row reveal">
+          <span><i class="fa-solid fa-location-dot"></i>Nigeria</span>
+          <span><i class="fa-solid fa-phone"></i>+234 811 015 0322</span>
+          <span><i class="fa-solid fa-clock"></i>Usually replies within 24 hours</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CASE STUDIES -->
+  <dialog class="case" id="case-fazobeth" aria-labelledby="t-fazobeth">
+    <div class="case__head"><div><span class="chip">E-commerce</span><h3 id="t-fazobeth" style="display:inline">Fazobeth Ventures</h3></div><button class="icon-btn" data-close aria-label="Close case study"><i class="fa-solid fa-xmark"></i></button></div>
+    <div class="case__body">
+      <div class="case__shot"><img src="assets/img/p4.webp" alt="Fazobeth Ventures home page" loading="lazy" /></div>
+      <div>
+        <h4>Overview</h4>
+        <p>An online store for mothers and babies where customers can browse products and shop conveniently. It takes a customer from browsing to a paid, confirmed order — and gives the shop owner an admin area to manage the catalogue.</p>
+        <h4 style="margin-top:1.6rem">Stack</h4>
+        <ul class="tags"><li>PHP</li><li>PDO / MySQL</li><li>JavaScript</li><li>jQuery</li><li>AJAX</li><li>Bootstrap</li><li>Paystack API</li><li>SMTP</li></ul>
+      </div>
+      <div>
+        <h4>What I built</h4>
+        <ul class="points">
+          <li>The complete shopping flow — product catalogue, product detail pages, AJAX-driven cart and product loading, checkout, order confirmation and a customer order-history page.</li>
+          <li>Paystack API integration for secure online payments, tying each payment to a processed order record in MySQL via PDO prepared statements.</li>
+          <li>Customer authentication with signup, login, OTP verification and SMTP email-based password reset.</li>
+          <li>An admin area with image-upload support for managing the product catalogue, on a responsive Bootstrap interface.</li>
+        </ul>
+      </div>
+      <div class="case__links">
+        <a class="btn btn--primary" href="https://fazobethventures.site.je/fazobeth" target="_blank" rel="noopener">Live demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        <a class="btn btn--ghost" href="https://github.com/Calebstack/fazobethbventures" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Source code</a>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="case" id="case-campusfind" aria-labelledby="t-campusfind">
+    <div class="case__head"><div><span class="chip">Lost &amp; found</span><h3 id="t-campusfind" style="display:inline">CampusFind</h3></div><button class="icon-btn" data-close aria-label="Close case study"><i class="fa-solid fa-xmark"></i></button></div>
+    <div class="case__body">
+      <div class="case__shot"><img src="assets/img/p1.webp" alt="CampusFind home page" loading="lazy" /></div>
+      <div>
+        <h4>Overview</h4>
+        <p>A lost-and-found web application that gives students and administrators a secure, searchable way to report and reclaim items on campus. Built as a full-stack platform for 50+ students and administrators.</p>
+        <h4 style="margin-top:1.6rem">Stack</h4>
+        <ul class="tags"><li>PHP</li><li>MySQL</li><li>PDO</li><li>AJAX</li><li>jQuery</li><li>Bootstrap</li><li>HTML5</li><li>CSS3</li></ul>
+      </div>
+      <div>
+        <h4>What I built</h4>
+        <ul class="points">
+          <li>All database interaction structured with PHP PDO prepared statements across 6 relational tables, avoiding raw SQL queries and reducing injection risk.</li>
+          <li>Session-based role authentication and password hashing to support secure multi-role access.</li>
+          <li>A real-time AJAX/jQuery email-availability check at signup to smooth the registration flow.</li>
+          <li>A fully responsive Bootstrap interface supporting CRUD operations and search across screen sizes.</li>
+        </ul>
+      </div>
+      <div class="case__links">
+        <a class="btn btn--primary" href="https://campusfind.xo.je/campus/" target="_blank" rel="noopener">Live demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        <a class="btn btn--ghost" href="https://github.com/Calebstack/CampusFind" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Source code</a>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="case" id="case-connectpro" aria-labelledby="t-connectpro">
+    <div class="case__head"><div><span class="chip">Service marketplace</span><h3 id="t-connectpro" style="display:inline">Connect Pro</h3></div><button class="icon-btn" data-close aria-label="Close case study"><i class="fa-solid fa-xmark"></i></button></div>
+    <div class="case__body">
+      <div class="case__shot"><img src="assets/img/p2.webp" alt="Connect Pro home page" loading="lazy" /></div>
+      <div>
+        <h4>Overview</h4>
+        <p>A service marketplace connecting clients with service providers, with dedicated dashboards and transparent booking tracking for each role — so everyone can see where a request stands from the first click to completion.</p>
+        <h4 style="margin-top:1.6rem">Stack</h4>
+        <ul class="tags"><li>PHP</li><li>MySQL</li><li>PDO</li><li>JavaScript</li><li>JSON</li><li>AJAX</li><li>Bootstrap</li></ul>
+      </div>
+      <div>
+        <h4>What I built</h4>
+        <ul class="points">
+          <li>Separate PHP-driven client and provider dashboards, keeping each role's interface and permissions cleanly isolated.</li>
+          <li>Keyword and category filtering with PHP and MySQL to speed up service discovery for clients.</li>
+          <li>A booking management system with PDO-backed status tracking, giving users real-time visibility from request through completion.</li>
+        </ul>
+      </div>
+      <div class="case__links">
+        <a class="btn btn--primary" href="https://connectpro.ct.ws/booking_service/index.php" target="_blank" rel="noopener">Live demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        <a class="btn btn--ghost" href="https://github.com/Calebstack/ConnectPro" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Source code</a>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="case" id="case-samprime" aria-labelledby="t-samprime">
+    <div class="case__head"><div><span class="chip">Vehicle showcase</span><h3 id="t-samprime" style="display:inline">SamPrime</h3></div><button class="icon-btn" data-close aria-label="Close case study"><i class="fa-solid fa-xmark"></i></button></div>
+    <div class="case__body">
+      <div class="case__shot"><img src="assets/img/p3.webp" alt="SamPrime vehicle inventory" loading="lazy" /></div>
+      <div>
+        <h4>Overview</h4>
+        <p>A vehicle showcase platform that helps SamPrime advertise its cars online and connect prospective buyers with available vehicles, with a searchable inventory and an admin area for the team.</p>
+        <h4 style="margin-top:1.6rem">Stack</h4>
+        <ul class="tags"><li>PHP</li><li>PDO / MySQL</li><li>JavaScript</li><li>HTML5</li><li>CSS3</li></ul>
+      </div>
+      <div>
+        <h4>What I built</h4>
+        <ul class="points">
+          <li>A car listings page and individual vehicle detail pages so prospective buyers can browse available stock and view each car's information online.</li>
+          <li>The data layer with PDO and MySQL prepared statements, with the codebase organised into reusable classes and shared page partials.</li>
+          <li>An admin area for managing vehicle listings, with a clean, responsive front end in HTML5, CSS3 and JavaScript.</li>
+        </ul>
+      </div>
+      <div class="case__links">
+        <a class="btn btn--primary" href="https://samprime.site.je/samprime/" target="_blank" rel="noopener">Live demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        <a class="btn btn--ghost" href="https://github.com/Calebstack/samprime" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Source code</a>
+      </div>
+    </div>
+  </dialog>
 
   <!-- FOOTER -->
   <footer>
-    <div class="container">
-      <div class="quick-links mb-4">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#work">Experience</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <p>&copy; 2026 Olusegun Caleb. All rights reserved.</p>
+    <div class="container foot">
+      <a class="brand" href="#home" aria-label="Caleb — home" style="margin-right:0"><span class="brand__name">Caleb</span><b>/&gt;</b></a>
+      <nav aria-label="Footer">
+        <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#resume">Résumé</a><a href="#contact">Contact</a>
+      </nav>
+      <p><span>&copy; <span id="yr">2026</span> Olusegun Caleb. All rights reserved.</span></p>
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom JS -->
+  <button class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-chevron-up"></i></button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="assets/js/script.js"></script>
-
-  <script>
-    const nav = document.querySelector('.navbar-custom');
-    const backToTopBtn = document.getElementById('backToTop');
-    const sectionLinks = [...document.querySelectorAll('.nav-link-custom[href^="#"]')];
-    const linkedSections = sectionLinks
-      .map(link => document.querySelector(link.getAttribute('href')))
-      .filter(Boolean);
-
-    const updateScrollState = () => {
-      const isScrolled = window.scrollY > 30;
-      nav.classList.toggle('scrolled', isScrolled);
-      backToTopBtn.classList.toggle('show', window.scrollY > 400);
-
-      const activationLine = nav.offsetHeight + Math.min(window.innerHeight * 0.18, 130);
-      const reachedPageBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
-      const activeSection = reachedPageBottom ? linkedSections[linkedSections.length - 1] : linkedSections.reduce((active, section) => (
-        section.getBoundingClientRect().top <= activationLine ? section : active
-      ), null);
-
-      sectionLinks.forEach(link => {
-        const isActive = activeSection && link.hash === `#${activeSection.id}`;
-        link.classList.toggle('active', Boolean(isActive));
-        if (isActive) {
-          link.setAttribute('aria-current', 'location');
-        } else {
-          link.removeAttribute('aria-current');
-        }
-      });
-    };
-    updateScrollState();
-    window.addEventListener('scroll', updateScrollState, { passive: true });
-
-    // Reveal on scroll
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('in');
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-    // Smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          const navbarHeight = document.querySelector('.navbar').offsetHeight;
-          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-        }
-      });
-    });
-  </script>
 </body>
-
 </html>
